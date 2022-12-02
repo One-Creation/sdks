@@ -35,3 +35,10 @@ jobs:
           latest: true
 #           # Artifact unpack location
 #           path: # optional, default is ./
+
+
+      - name: Artifact downloader
+        uses: bettermarks/action-artifact-download@0.4.0
+        with:
+          repo: One-Creation/oc-java-sdk
+          token: ${{ secrets.ONECREATION_PAT_TOKEN }}
