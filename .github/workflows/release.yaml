@@ -33,6 +33,6 @@ jobs:
           # Artifact name (download all artifacts in not specified)
 #           name: # optional
 #           # Download latest artifact
-#           latest: # optional
+          latest: true
 #           # Artifact unpack location
 #           path: # optional, default is ./
