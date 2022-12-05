@@ -64,6 +64,7 @@ jobs:
       run: | 
         toRelease=$(echo "/tmp/releases/"$( dir /tmp/releases/ | sed 's/  / \/tmp\/releases\//g'))
         echo "toRelease=$toRelease" >> $GITHUB_OUTPUT 
+        sleep 10
 
 
     - name: Update Release
