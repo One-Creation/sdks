@@ -63,7 +63,7 @@ jobs:
       if: always()    
       id: artifacts
       run: | 
-        echo "toRelease=$(dir /tmp/releases/)" >> $GITHUB_OUTPUT 
+        echo "toRelease=echo "/tmp/releases/"$($(dir /tmp/releases/) | sed 's/ / \/tmp\/releases\//g')" >> $GITHUB_OUTPUT 
 
 
     - name: Update Release
