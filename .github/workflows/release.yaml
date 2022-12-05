@@ -61,8 +61,10 @@ jobs:
 
     - name: Prepare Artifacts to Release
       if: always()    
+      id: artifacts
       run: | 
-        ls -ltrah /tmp/releases/
+        echo "toRelease=$(dir /tmp/releases/)" >> $GITHUB_OUTPUT 
+
 
     - name: Update Release
       if: always()    
@@ -70,7 +72,7 @@ jobs:
       with:
         token: ${{ secrets.ONECREATION_PAT_TOKEN }}
         # Paths to built files to be released. May be absolute or relative to \$\{\{ github.workspace \}\}.
-        files: /tmp/releases/*
+        files: ${{ steps.artifacts.outputs.toRelease }}
         release:  ${{  inputs.releaseToBeClosed  }}
         tag: ${{  inputs.releaseToBeClosed  }}  
         # A one-line description for both the tag and the release.
