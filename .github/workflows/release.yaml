@@ -60,6 +60,7 @@ jobs:
 
 
     - name: Prepare Artifacts to Release
+      if: always()    
       run: | 
         ls -ltrah /tmp/releases/
 
