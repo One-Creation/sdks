@@ -54,8 +54,8 @@ jobs:
         # The name of the tag. This should come from the webhook payload, `github.GITHUB_REF` when a user pushes a new tag
         tag_name: ${{  inputs.releaseToBeClosed  }}
         release_name:  ${{  inputs.releaseToBeClosed  }}
-        draft: true
-        prerelease: true
+        draft: false
+        prerelease: false
 
 
     - name: Prepare Artifacts to Release
