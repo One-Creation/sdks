@@ -1,4 +1,5 @@
-# One Creation Java SDK
+
+# One Creation Python SDK
 This is the first official SDK of the O.C. platform. It is a lightweight fully featured 
 implementation of the API with custom error handling and examples provided.
 
@@ -87,15 +88,8 @@ back into one massive confusing response that contains many null values from irr
 - add other languages to meet popularity/demand
 - backwards compatibility
 
-We wrote our backend in Java, it makes sense to develop an SDK in the same language.
+Custom things about Python like the use of type hinting and how since Python views modules as smallest 
+unit of decomposition, that we use "models.py" instead of separate classes for models
 
-We use bloated dependencies such as Spring for our controllers, but we can use the built-in HTTP 
-clients from the standard Java library. This is just one example to keep the SDK light. However, 
-that same native library did not support multipart data, so instead of downloading a large MIME 
-type library, a custom class was written to handle the circumstances around One Creation's usage; 
-thus still keeping the application as small as possible.
-
-Python and JS/TS are popular languages, we should accommodate them. This will encourage growth.
-
-We are never sure what version the client is using, and we can't force an upgrade on them. It would 
-be terrible if we updated the SDK and suddenly half our users weren't able to perform basic ops.
+Also, how since the lack of typing forces a different json deserialization strategy than the one 
+implemented in oc-java-sdk.
