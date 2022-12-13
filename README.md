@@ -7,7 +7,7 @@ One Creation SDK's:
 
 All of One Creation's functionality is available via REST API, so why would we need an SDK? The short answer is that nobody likes having to write their own API client; SDKs are much easier to get started with, and have the following additional benefits:
 
-Allows for sane defaults (e.g: application/json)
+Allows for same defaults (e.g: application/json)
 Error handling built-in
 Validate required fields
 Only known methods/content
